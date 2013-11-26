@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @code.source %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @code.language %>
+</p>
+
+<p>
+  <strong>Cases:</strong>
+  <%= @code.cases %>
+</p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @code.uid %>
+</p>
+
+<%= link_to 'Edit', edit_code_path(@code) %> |
+<%= link_to 'Back', codes_path %>

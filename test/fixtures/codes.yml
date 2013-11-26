@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source: MyText
+  language: MyString
+  cases: MyText
+  uid: MyString
+
+two:
+  source: MyText
+  language: MyString
+  cases: MyText
+  uid: MyString
