@@ -16,5 +16,5 @@
 //= require ace/ace
 //= require ace/theme-textmate.js
 //= require ace/mode-ruby.js
-//= require twitter/bootstrap
+//= require bootstrap
 //= require_tree .
