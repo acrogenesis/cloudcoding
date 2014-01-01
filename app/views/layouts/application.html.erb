@@ -2,41 +2,15 @@
 <html>
 <head>
   <title>Cloudcoding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="./" class="navbar-brand">CloudCoding</a>
-      </div>
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav navbar-right">
-          <% if current_user %>
-            <p class="navbar-text">Signed in as <%= current_user.name %>!</p>
-            <li>
-              <%= link_to "Sign out", signout_path %>
-            </li>
-          <% else %>
-            <li>
-              <%= link_to "Sign in with Github", "/auth/github" %>
-            </li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <%= render 'layouts/navbar' %>
   <main class="bs-masthead" id="content" role="main">
-    <div id="container">
+    <div class="container">
       <%= yield %>
     </div>
   </main>
