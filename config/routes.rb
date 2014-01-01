@@ -1,7 +1,7 @@
 Cloudcoding::Application.routes.draw do
   resources :codes
 
-  root 'pages#index'
+  root 'pages#homepage'
 
   get 'auth/:provider/callback', to: "sessions#create"
   get 'auth/failure', to: redirect('/')

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   include ActionController::Live
-  def index
-    
+  def homepage
+
   end
   def events
     response.stream.write ""
