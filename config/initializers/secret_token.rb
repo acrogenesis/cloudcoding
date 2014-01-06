@@ -9,4 +9,8 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Cloudcoding::Application.config.secret_key_base = 'fa34ed592a044e16feb19c15cc9b1d1e6180dbb95d42aef9711b2e33f3a7fb926cdec7217dc7dc2cc726d43218612febb7bf414fb9e9bb8d27efe70b3a5af90d'
+Cloudcoding::Application.config.secret_key_base = if Rails.env.production?
+  ENV['SECRET_KEY_BASE'] # set secret_token from ENV
+else
+  ('x' * 30) # meets minimum requirement of 30 chars long
+end
